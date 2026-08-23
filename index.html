@@ -8,353 +8,350 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Chrome-like Tabs Header -->
-        <header class="tabs-header">
-            <div class="tabs-container">
-                <button class="tab active" data-target="0">
-                    <span class="tab-title">Home</span>
-                    <div class="tab-glow"></div>
-                </button>
-                <button class="tab" data-target="1">
-                    <span class="tab-title">About Me</span>
-                    <div class="tab-glow"></div>
-                </button>
-                <button class="tab" data-target="2">
-                    <span class="tab-title">Technical Skills</span>
-                    <div class="tab-glow"></div>
-                </button>
-                <button class="tab" data-target="3">
-                    <span class="tab-title">Projects</span>
-                    <div class="tab-glow"></div>
-                </button>
-                <button class="tab" data-target="4">
-                    <span class="tab-title">Internships</span>
-                    <div class="tab-glow"></div>
-                </button>
-                <button class="tab" data-target="5">
-                    <span class="tab-title">Education</span>
-                    <div class="tab-glow"></div>
-                </button>
-                <button class="tab" data-target="6">
-                    <span class="tab-title">Contact</span>
-                    <div class="tab-glow"></div>
-                </button>
-            </div>
-        </header>
+    <!-- Fixed Chrome-like Tabs Header at Top -->
+    <header class="tabs-header">
+        <div class="tabs-container">
+            <button class="tab active" data-target="section-0">
+                <span class="tab-title">Home</span>
+                <div class="tab-glow"></div>
+            </button>
+            <button class="tab" data-target="section-1">
+                <span class="tab-title">About Me</span>
+                <div class="tab-glow"></div>
+            </button>
+            <button class="tab" data-target="section-2">
+                <span class="tab-title">Technical Skills</span>
+                <div class="tab-glow"></div>
+            </button>
+            <button class="tab" data-target="section-3">
+                <span class="tab-title">Projects</span>
+                <div class="tab-glow"></div>
+            </button>
+            <button class="tab" data-target="section-4">
+                <span class="tab-title">Internships</span>
+                <div class="tab-glow"></div>
+            </button>
+            <button class="tab" data-target="section-5">
+                <span class="tab-title">Education</span>
+                <div class="tab-glow"></div>
+            </button>
+            <button class="tab" data-target="section-6">
+                <span class="tab-title">Contact</span>
+                <div class="tab-glow"></div>
+            </button>
+        </div>
+    </header>
 
-        <!-- Main Content Slider -->
-        <main class="content-slider">
-            <div class="slider-track" id="slider-track">
+    <!-- Main Vertical Scrollable Content Container -->
+    <main class="main-content">
+        
+        <!-- Section 0: Home -->
+        <section class="page-section" id="section-0">
+            <div class="section-content home-content">
+                <div class="profile-container">
+                    <img src="IMAGES/MYSELF.jpeg" alt="Naveen P." class="profile-img">
+                </div>
+                <h1 style="color: var(--text-white);">NAVEEN P</h1>
+                <p class="bio-text">An aspiring Electrical Engineer passionate about engineering design and simulation, with a particular interest in power systems and electrical machine design.</p>
                 
-                <!-- Section 0: Home -->
-                <section class="slide-section" id="section-0">
-                    <div class="section-content home-content">
-                        <div class="profile-container">
-                            <img src="IMAGES/MYSELF.jpeg" alt="Naveen P." class="profile-img">
-                        </div>
-                        <h1 style="color: var(--text-white);">NAVEEN P</h1>
-                        <p class="bio-text">An aspiring Electrical Engineer passionate about engineering design and simulation, with a particular interest in power systems and electrical machine design.</p>
-                        
-                        <a href="NAVEEN_P_Resume.pdf" download="NAVEEN_P_Resume.pdf" class="download-resume-btn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                            Download Resume
-                        </a>
+                <a href="NAVEEN_P_Resume.pdf" download="NAVEEN_P_Resume.pdf" class="download-resume-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Resume
+                </a>
 
-                        <p>Welcome to my portfolio. Explore my work through the tabs above.</p>
-                        <div class="hero-decorative">
-                            <div class="neon-line"></div>
-                        </div>
+                <p>Welcome to my portfolio. Explore my work through the sections below or use the tabs above to jump directly.</p>
+                <div class="hero-decorative">
+                    <div class="neon-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: About Me -->
+        <section class="page-section" id="section-1">
+            <div class="section-content">
+                <h2 class="neon-text-white">About Me</h2>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Who am I?</span>
+                        <span class="accordion-arrow">&#8964;</span>
                     </div>
-                </section>
-
-                <!-- Section 1: About Me -->
-                <section class="slide-section" id="section-1">
-                    <div class="section-content">
-                        <h2 class="neon-text-white">About Me</h2>
-
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">Who am I?</span>
-                                <span class="accordion-arrow">&#8964;</span>
-                            </div>
-                            <div class="accordion-body">
-                                <p>I am currently pursuing a Bachelor of Engineering in Electrical and Electronics Engineering, with a strong interest in electrical engineering design and simulation. Through academic projects, simulations, and hands-on learning, I am strengthening my ability to apply electrical engineering concepts to practical problems.</p>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">Areas of Interests</span>
-                                <span class="accordion-arrow">&#8964;</span>
-                            </div>
-                            <div class="accordion-body">
-                                <p>I have a strong interest in engineering design and simulation, particularly in power systems and electrical machine design. I am also interested in research and development (R&D), where I can explore new ideas and work on innovative solutions to engineering challenges.</p>
-                                <p>Alongside electrical engineering, I have a strong interest in mechanical design and would like to develop expertise in this field as well. I believe that exploring both electrical and mechanical design can help me approach engineering problems from a broader perspective and develop more effective, practical solutions.</p>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">My Learning Journey</span>
-                                <span class="accordion-arrow">&#8964;</span>
-                            </div>
-                            <div class="accordion-body">
-                                <p>I have built a foundation in core electrical engineering subjects, including Power Systems and Electrical Machines, and I am now focusing on strengthening my practical and software-based skills. I am developing my capabilities in engineering design, simulation, and analysis using tools such as MATLAB and other engineering software.</p>
-                                <p>Moving forward, I aim to deepen my technical expertise and apply my knowledge to real-world engineering challenges, developing practical and effective solutions through continuous learning and hands-on experience.</p>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">Career Goal</span>
-                                <span class="accordion-arrow">&#8964;</span>
-                            </div>
-                            <div class="accordion-body">
-                                <p>In my professional journey, I aspire to become an engineer who creates meaningful value for the community through practical and innovative engineering solutions. I aim to contribute not only to the growth of the organizations I work with, but also to the well-being of society and the environment. Through responsible engineering, continuous learning, and sustainable thinking, I hope to use my knowledge and skills to make a positive and lasting impact.</p>
-                            </div>
-                        </div>
-
+                    <div class="accordion-body">
+                        <p>I am currently pursuing a Bachelor of Engineering in Electrical and Electronics Engineering, with a strong interest in electrical engineering design and simulation. Through academic projects, simulations, and hands-on learning, I am strengthening my ability to apply electrical engineering concepts to practical problems.</p>
                     </div>
-                </section>
+                </div>
 
-                <!-- Section 2: Technical Skills -->
-                <section class="slide-section" id="section-2">
-                    <div class="section-content">
-                        <h2 class="neon-text-white">Technical Skills</h2>
-
-                        <div class="skills-subsection">
-                            <h3>Core Technical Knowledge</h3>
-                            <ul class="skills-list">
-                                <li>Network Theory</li>
-                                <li>Electrical Machines</li>
-                                <li>Power Systems</li>
-                            </ul>
-                        </div>
-
-                        <div class="skills-subsection">
-                            <h3>Engineering Softwares</h3>
-                            <ul class="skills-list">
-                                <li>MATLAB / Simulink</li>
-                                <li>Solidworks</li>
-                            </ul>
-                        </div>
-
-                        <div class="skills-subsection">
-                            <h3>Professional Skills</h3>
-                            <ul class="skills-list">
-                                <li>Technical Communication</li>
-                                <li>Teamwork</li>
-                                <li>Time Management</li>
-                            </ul>
-                        </div>
-
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Areas of Interests</span>
+                        <span class="accordion-arrow">&#8964;</span>
                     </div>
-                </section>
-
-                <!-- Section 3: Projects -->
-                <section class="slide-section" id="section-3">
-                    <div class="section-content">
-                        <h2 class="neon-text-white">Projects</h2>
-                        
-                        <div class="project-card-expandable">
-                            <div class="project-card-header">
-                                <h3 class="project-title">BAJA All-Terrain Vehicle (Team Project)</h3>
-                                <span class="project-expand-arrow">&#8964;</span>
-                            </div>
-                            <div class="project-card-details">
-                                <p class="project-desc">Designed and developed an all-terrain vehicle as part of a student BAJA project, involving the integration of mechanical and electrical systems to achieve reliable performance in challenging off-road conditions. The project provided hands-on experience in vehicle design, component selection, fabrication, analysis, testing, and system integration, while applying engineering principles to develop a functional and competition-ready vehicle.</p>
-                                
-                                <h4 class="project-section-title">My Contributions</h4>
-                                
-                                <div class="project-sub-item">
-                                    <h5>Roll Cage Subsystem</h5>
-                                    <p>Designed and integrated the vehicle's roll cage, focusing on structural design, component integration, and ensuring the cage met the required design and safety considerations.</p>
-                                </div>
-                                
-                                <div class="project-sub-item">
-                                    <h5>Design & CAE Team</h5>
-                                    <p>Designed and analysed various vehicle components using CAD and CAE tools, evaluating their design and structural performance to support the development of reliable and optimized components.</p>
-                                </div>
-                                
-                                <div class="project-sub-item">
-                                    <h5>Electricals Subsystem</h5>
-                                    <p>Worked on the vehicle's electrical components and sensors, contributing to their selection, integration, wiring, and functional testing as part of the overall vehicle electrical system.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card-expandable">
-                            <div class="project-card-header">
-                                <h3 class="project-title">Piezoelectric Speed Breaker</h3>
-                                <span class="project-expand-arrow">&#8964;</span>
-                            </div>
-                            <div class="project-card-details">
-                                <p class="project-desc">Developing a piezoelectric energy harvesting speed breaker to convert mechanical energy from vehicles into electrical energy through an integrated harvesting, storage, and monitoring system.</p>
-                                
-                                <h4 class="project-section-title">My Contribution</h4>
-                                <div class="project-sub-item">
-                                    <p>Responsible for the overall technical development, including system design, component selection, circuit integration, simulation, testing, and troubleshooting.</p>
-                                </div>
-                                
-                                <h4 class="project-section-title">Current Status</h4>
-                                <div class="project-sub-item">
-                                    <p>Under Development — Currently working on system integration, testing, and performance improvement.</p>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="accordion-body">
+                        <p>I have a strong interest in engineering design and simulation, particularly in power systems and electrical machine design. I am also interested in research and development (R&D), where I can explore new ideas and work on innovative solutions to engineering challenges.</p>
+                        <p>Alongside electrical engineering, I have a strong interest in mechanical design and would like to develop expertise in this field as well. I believe that exploring both electrical and mechanical design can help me approach engineering problems from a broader perspective and develop more effective, practical solutions.</p>
                     </div>
-                </section>
+                </div>
 
-                <!-- Section 4: Internships -->
-                <section class="slide-section" id="section-4">
-                    <div class="section-content">
-                        <h2 class="neon-text-white">Internships</h2>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <h3>NLC India Limited (Student Intern Trainee)</h3>
-                                <span>JUNE 2025</span>
-                                <p>Gained practical exposure to thermal power plant operations and observed power generation processes and learned the operation of transformers, switchgear, generators, and plant safety procedures.</p>
-                                
-                                <div class="internship-images-toggle">
-                                    <span class="show-images-btn">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
-                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                            <polyline points="21 15 16 10 5 21"></polyline>
-                                        </svg>
-                                        Show images
-                                    </span>
-                                    <div class="internship-images-dropdown">
-                                        <div class="internship-gallery">
-                                            <div class="internship-img-card">
-                                                <img src="IMAGES/NLC_INTERNSHIP/Name_Board.jpeg" alt="NLC India Limited Name Board" class="internship-img">
-                                            </div>
-                                            <div class="internship-img-card">
-                                                <img src="IMAGES/NLC_INTERNSHIP/IMG_20260823_182306.jpg.jpeg" alt="NLC India Limited Internship Activity" class="internship-img">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <h3>TNEB (Student Intern Trainee)</h3>
-                                <span>JUN 2026</span>
-                                <p>Acquired hands-on knowledge of substations and learned substation operations, electrical maintenance practices, and the procedures involved in ensuring reliable power supply.</p>
-                                
-                                <div class="internship-images-toggle">
-                                    <span class="show-images-btn">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
-                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                            <polyline points="21 15 16 10 5 21"></polyline>
-                                        </svg>
-                                        Show images
-                                    </span>
-                                    <div class="internship-images-dropdown">
-                                        <div class="internship-gallery">
-                                            <div class="internship-img-card">
-                                                <img src="IMAGES/TNEB/Name_Board.jpeg" alt="TNEB Name Board" class="internship-img">
-                                            </div>
-                                            <div class="internship-img-card">
-                                                <img src="IMAGES/TNEB/20260615_41154PMByGPSMapCamera1.jpg.jpeg" alt="TNEB Substation" class="internship-img">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">My Learning Journey</span>
+                        <span class="accordion-arrow">&#8964;</span>
                     </div>
-                </section>
-
-                <!-- Section 5: Education -->
-                <section class="slide-section" id="section-5">
-                    <div class="section-content">
-                        <h2 class="neon-text-white">Education</h2>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <h3>B. E. Electrical & Electronics Engineering (Pursuing)</h3>
-                                <span>Sri Sairam Engineering College | 2023 - 2027</span>
-                                <p>CGPA : 7.40</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h3>Higher Secondary (12th)</h3>
-                                <span>Raj Vidyalaya Matriculation Higher Secondary School | 2022</span>
-                                <p>Percentage : 79%</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h3>Secondary School (10th)</h3>
-                                <span>Raj Vidyalaya Matriculation Higher Secondary School | 2020</span>
-                                <p>Percentage : 89%</p>
-                            </div>
-                        </div>
+                    <div class="accordion-body">
+                        <p>I have built a foundation in core electrical engineering subjects, including Power Systems and Electrical Machines, and I am now focusing on strengthening my practical and software-based skills. I am developing my capabilities in engineering design, simulation, and analysis using tools such as MATLAB and other engineering software.</p>
+                        <p>Moving forward, I aim to deepen my technical expertise and apply my knowledge to real-world engineering challenges, developing practical and effective solutions through continuous learning and hands-on experience.</p>
                     </div>
-                </section>
+                </div>
 
-                <!-- Section 6: Contact -->
-                <section class="slide-section" id="section-6">
-                    <div class="section-content">
-                        <h2 class="neon-text-white">Contact</h2>
-                        <p class="contact-intro">I am interested in opportunities related to Electrical Engineering Design, Electrical Machine Design, Power Systems, Engineering Simulation, Mechanical Design, and Research & Development. I am open to new opportunities and would be glad to explore roles that align with my interests and skills. You can reach me through the contact details provided below.</p>
-                        
-                        <div class="contacts-grid">
-                            <!-- Email Contact Card -->
-                            <div class="contact-card" id="contact-email">
-                                <div class="contact-card-left">
-                                    <div class="contact-icon-box">
-                                        <img src="LOGOS_FOR_CONTACTS/Email.jpg" alt="Email" class="contact-logo">
-                                    </div>
-                                    <div class="contact-info">
-                                        <h3 class="contact-title">Email ID</h3>
-                                        <p class="contact-detail" id="email-text">naveenpandian.official2004@gmail.com</p>
-                                    </div>
-                                </div>
-                                <div class="contact-action-box">
-                                    <button class="contact-btn copy-btn" id="copy-email-btn" title="Copy Email ID">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                        <span id="copy-btn-label">Copy ID</span>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- LinkedIn Contact Card -->
-                            <div class="contact-card" id="contact-linkedin">
-                                <div class="contact-card-left">
-                                    <div class="contact-icon-box">
-                                        <img src="LOGOS_FOR_CONTACTS/linkedin.png" alt="LinkedIn" class="contact-logo">
-                                    </div>
-                                    <div class="contact-info">
-                                        <h3 class="contact-title">LinkedIn</h3>
-                                    </div>
-                                </div>
-                                <div class="contact-action-box">
-                                    <a href="https://www.linkedin.com/in/naveen-p-a4279b290" target="_blank" rel="noopener noreferrer" class="contact-btn open-btn" title="Open LinkedIn Profile">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                            <polyline points="15 3 21 3 21 9"></polyline>
-                                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                                        </svg>
-                                        <span>Open</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Career Goal</span>
+                        <span class="accordion-arrow">&#8964;</span>
                     </div>
-                </section>
+                    <div class="accordion-body">
+                        <p>In my professional journey, I aspire to become an engineer who creates meaningful value for the community through practical and innovative engineering solutions. I aim to contribute not only to the growth of the organizations I work with, but also to the well-being of society and the environment. Through responsible engineering, continuous learning, and sustainable thinking, I hope to use my knowledge and skills to make a positive and lasting impact.</p>
+                    </div>
+                </div>
 
             </div>
-        </main>
-    </div>
+        </section>
+
+        <!-- Section 2: Technical Skills -->
+        <section class="page-section" id="section-2">
+            <div class="section-content">
+                <h2 class="neon-text-white">Technical Skills</h2>
+
+                <div class="skills-subsection">
+                    <h3>Core Technical Knowledge</h3>
+                    <ul class="skills-list">
+                        <li>Network Theory</li>
+                        <li>Electrical Machines</li>
+                        <li>Power Systems</li>
+                    </ul>
+                </div>
+
+                <div class="skills-subsection">
+                    <h3>Engineering Softwares</h3>
+                    <ul class="skills-list">
+                        <li>MATLAB / Simulink</li>
+                        <li>Solidworks</li>
+                    </ul>
+                </div>
+
+                <div class="skills-subsection">
+                    <h3>Professional Skills</h3>
+                    <ul class="skills-list">
+                        <li>Technical Communication</li>
+                        <li>Teamwork</li>
+                        <li>Time Management</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Projects -->
+        <section class="page-section" id="section-3">
+            <div class="section-content">
+                <h2 class="neon-text-white">Projects</h2>
+                
+                <div class="project-card-expandable">
+                    <div class="project-card-header">
+                        <h3 class="project-title">BAJA All-Terrain Vehicle (Team Project)</h3>
+                        <span class="project-expand-arrow">&#8964;</span>
+                    </div>
+                    <div class="project-card-details">
+                        <p class="project-desc">Designed and developed an all-terrain vehicle as part of a student BAJA project, involving the integration of mechanical and electrical systems to achieve reliable performance in challenging off-road conditions. The project provided hands-on experience in vehicle design, component selection, fabrication, analysis, testing, and system integration, while applying engineering principles to develop a functional and competition-ready vehicle.</p>
+                        
+                        <h4 class="project-section-title">My Contributions</h4>
+                        
+                        <div class="project-sub-item">
+                            <h5>Roll Cage Subsystem</h5>
+                            <p>Designed and integrated the vehicle's roll cage, focusing on structural design, component integration, and ensuring the cage met the required design and safety considerations.</p>
+                        </div>
+                        
+                        <div class="project-sub-item">
+                            <h5>Design & CAE Team</h5>
+                            <p>Designed and analysed various vehicle components using CAD and CAE tools, evaluating their design and structural performance to support the development of reliable and optimized components.</p>
+                        </div>
+                        
+                        <div class="project-sub-item">
+                            <h5>Electricals Subsystem</h5>
+                            <p>Worked on the vehicle's electrical components and sensors, contributing to their selection, integration, wiring, and functional testing as part of the overall vehicle electrical system.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-expandable">
+                    <div class="project-card-header">
+                        <h3 class="project-title">Piezoelectric Speed Breaker</h3>
+                        <span class="project-expand-arrow">&#8964;</span>
+                    </div>
+                    <div class="project-card-details">
+                        <p class="project-desc">Developing a piezoelectric energy harvesting speed breaker to convert mechanical energy from vehicles into electrical energy through an integrated harvesting, storage, and monitoring system.</p>
+                        
+                        <h4 class="project-section-title">My Contribution</h4>
+                        <div class="project-sub-item">
+                            <p>Responsible for the overall technical development, including system design, component selection, circuit integration, simulation, testing, and troubleshooting.</p>
+                        </div>
+                        
+                        <h4 class="project-section-title">Current Status</h4>
+                        <div class="project-sub-item">
+                            <p>Under Development — Currently working on system integration, testing, and performance improvement.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 4: Internships -->
+        <section class="page-section" id="section-4">
+            <div class="section-content">
+                <h2 class="neon-text-white">Internships</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>NLC India Limited (Student Intern Trainee)</h3>
+                        <span>JUNE 2025</span>
+                        <p>Gained practical exposure to thermal power plant operations and observed power generation processes and learned the operation of transformers, switchgear, generators, and plant safety procedures.</p>
+                        
+                        <div class="internship-images-toggle">
+                            <span class="show-images-btn">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                    <polyline points="21 15 16 10 5 21"></polyline>
+                                </svg>
+                                Show images
+                            </span>
+                            <div class="internship-images-dropdown">
+                                <div class="internship-gallery">
+                                    <div class="internship-img-card">
+                                        <img src="IMAGES/NLC_INTERNSHIP/Name_Board.jpeg" alt="NLC India Limited Name Board" class="internship-img">
+                                    </div>
+                                    <div class="internship-img-card">
+                                        <img src="IMAGES/NLC_INTERNSHIP/IMG_20260823_182306.jpg.jpeg" alt="NLC India Limited Internship Activity" class="internship-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>TNEB (Student Intern Trainee)</h3>
+                        <span>JUN 2026</span>
+                        <p>Acquired hands-on knowledge of substations and learned substation operations, electrical maintenance practices, and the procedures involved in ensuring reliable power supply.</p>
+                        
+                        <div class="internship-images-toggle">
+                            <span class="show-images-btn">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                    <polyline points="21 15 16 10 5 21"></polyline>
+                                </svg>
+                                Show images
+                            </span>
+                            <div class="internship-images-dropdown">
+                                <div class="internship-gallery">
+                                    <div class="internship-img-card">
+                                        <img src="IMAGES/TNEB/Name_Board.jpeg" alt="TNEB Name Board" class="internship-img">
+                                    </div>
+                                    <div class="internship-img-card">
+                                        <img src="IMAGES/TNEB/20260615_41154PMByGPSMapCamera1.jpg.jpeg" alt="TNEB Substation" class="internship-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Education -->
+        <section class="page-section" id="section-5">
+            <div class="section-content">
+                <h2 class="neon-text-white">Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>B. E. Electrical & Electronics Engineering (Pursuing)</h3>
+                        <span>Sri Sairam Engineering College | 2023 - 2027</span>
+                        <p>CGPA : 7.40</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Higher Secondary (12th)</h3>
+                        <span>Raj Vidyalaya Matriculation Higher Secondary School | 2022</span>
+                        <p>Percentage : 79%</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Secondary School (10th)</h3>
+                        <span>Raj Vidyalaya Matriculation Higher Secondary School | 2020</span>
+                        <p>Percentage : 89%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Contact -->
+        <section class="page-section" id="section-6">
+            <div class="section-content">
+                <h2 class="neon-text-white">Contact</h2>
+                <p class="contact-intro">I am interested in opportunities related to Electrical Engineering Design, Electrical Machine Design, Power Systems, Engineering Simulation, Mechanical Design, and Research & Development. I am open to new opportunities and would be glad to explore roles that align with my interests and skills. You can reach me through the contact details provided below.</p>
+                
+                <div class="contacts-grid">
+                    <!-- Email Contact Card -->
+                    <div class="contact-card" id="contact-email">
+                        <div class="contact-card-left">
+                            <div class="contact-icon-box">
+                                <img src="LOGOS_FOR_CONTACTS/Email.jpg" alt="Email" class="contact-logo">
+                            </div>
+                            <div class="contact-info">
+                                <h3 class="contact-title">Email ID</h3>
+                                <p class="contact-detail" id="email-text">naveenpandian.official2004@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-action-box">
+                            <button class="contact-btn copy-btn" id="copy-email-btn" title="Copy Email ID">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                <span id="copy-btn-label">Copy ID</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn Contact Card -->
+                    <div class="contact-card" id="contact-linkedin">
+                        <div class="contact-card-left">
+                            <div class="contact-icon-box">
+                                <img src="LOGOS_FOR_CONTACTS/linkedin.png" alt="LinkedIn" class="contact-logo">
+                            </div>
+                            <div class="contact-info">
+                                <h3 class="contact-title">LinkedIn</h3>
+                            </div>
+                        </div>
+                        <div class="contact-action-box">
+                            <a href="https://www.linkedin.com/in/naveen-p-a4279b290" target="_blank" rel="noopener noreferrer" class="contact-btn open-btn" title="Open LinkedIn Profile">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                <span>Open</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
