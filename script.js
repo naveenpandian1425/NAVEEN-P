@@ -1,36 +1,85 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab');
-    const sliderTrack = document.getElementById('slider-track');
-    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    const tabsContainer = document.querySelector('.tabs-container');
+    const sections = document.querySelectorAll('.page-section');
 
-    function activateTabByIndex(targetIndex) {
-        tabs.forEach(t => t.classList.remove('active'));
-        const targetTab = document.querySelector(`.tab[data-target="${targetIndex}"]`);
-        if (targetTab) {
-            targetTab.classList.add('active');
-        }
-        const translateXValue = -(targetIndex * 100);
-        sliderTrack.style.transform = `translateX(${translateXValue}vw)`;
-    }
-
+    // Smooth Scroll on Tab Click
     tabs.forEach(tab => {
         tab.addEventListener('click', (e) => {
-            const targetIndex = tab.getAttribute('data-target');
-            if (targetIndex !== null) {
-                activateTabByIndex(targetIndex);
+            e.preventDefault();
+            const targetId = tab.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                const header = document.querySelector('.tabs-header');
+                const headerHeight = header ? header.offsetHeight : 55;
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + (window.pageYOffset || document.documentElement.scrollTop || 0) - headerHeight + 5;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });
 
-    dropdownItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const targetIndex = item.getAttribute('data-target');
-            if (targetIndex !== null) {
-                activateTabByIndex(targetIndex);
+    // Scrollspy: Highlight Active Tab on Page Scroll
+    function updateActiveTabOnScroll() {
+        const header = document.querySelector('.tabs-header');
+        const headerHeight = header ? header.offsetHeight : 55;
+        const scrollPosition = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) + headerHeight + 60;
+
+        let currentSectionId = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSectionId = section.getAttribute('id');
             }
         });
-    });
+
+        // Special case for bottom of page (Contact section)
+        const scrollBottom = window.innerHeight + (window.pageYOffset || document.documentElement.scrollTop || 0);
+        const totalHeight = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight
+        );
+
+        if (scrollBottom >= totalHeight - 60) {
+            const lastSection = sections[sections.length - 1];
+            if (lastSection) {
+                currentSectionId = lastSection.getAttribute('id');
+            }
+        }
+
+        if (currentSectionId) {
+            tabs.forEach(tab => {
+                if (tab.getAttribute('data-target') === currentSectionId) {
+                    if (!tab.classList.contains('active')) {
+                        tabs.forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
+
+                        // Auto-scroll tab container so active tab is visible on mobile
+                        if (tabsContainer) {
+                            const tabOffsetLeft = tab.offsetLeft;
+                            const tabWidth = tab.offsetWidth;
+                            const containerWidth = tabsContainer.offsetWidth;
+                            tabsContainer.scrollTo({
+                                left: tabOffsetLeft - (containerWidth / 2) + (tabWidth / 2),
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    window.addEventListener('scroll', updateActiveTabOnScroll, { passive: true });
+    window.addEventListener('resize', updateActiveTabOnScroll, { passive: true });
+    updateActiveTabOnScroll(); // Initial check on load
 
     // Accordion toggle logic for About Me
     const accordionHeaders = document.querySelectorAll('.accordion-header');
